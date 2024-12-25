@@ -1,0 +1,14 @@
+_id: 60f16c7029eb79002d0857df
+name: Import Excel
+language: javascript
+timeout: 40
+triggers:
+  default:
+    type: http
+    active: true
+    options:
+      method: Get
+      path: /
+      preflight: true
+env: {}
+memoryLimit: 100

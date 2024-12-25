@@ -1,0 +1,36 @@
+_id: 60d9d2b438158a002c39266a
+name: Retry Reward
+language: javascript
+timeout: 40
+triggers:
+  checkReward:
+    options:
+      timezone: Europe/Istanbul
+      frequency: "*/10 * * * *"
+    type: schedule
+    active: true
+  detectUniqueCharges:
+    options:
+      method: Get
+      path: /detectUniqueCharges
+      preflight: true
+    type: http
+    active: true
+  detectMissingAvailablePlay:
+    options:
+      timezone: Europe/Istanbul
+      frequency: 0 * * * *
+    type: schedule
+    active: true
+env:
+  PAST_MATCHES_BUCKET_ID: "{PAST_MATCHES_BUCKET_ID}"
+  REWARD_BUCKET_ID: "{REWARD_BUCKET_ID}"
+  USER_BUCKET_ID: "{USER_BUCKET_ID}"
+  MANUALLY_REWARD_BUCKET_ID: "{MANUALLY_REWARD_BUCKET_ID}"
+  SECRET_API_KEY: "{SECRET_API_KEY}"
+  CHARGE_BUCKET_ID: "{CHARGE_BUCKET_ID}"
+  PLAY_COUNT_LOGS_BUCKET_ID: "{PLAY_COUNT_LOGS_BUCKET_ID}"
+  BUGGED_REWARDS_BUCKET_ID: "{BUGGED_REWARDS_BUCKET_ID}"
+  NO_DEVKIT_DATABASE_WARNING: "{NO_DEVKIT_DATABASE_WARNING}"
+  SINGLEPLAY_PAST_MATCHES_BUCKET_ID: "{SINGLEPLAY_PAST_MATCHES_BUCKET_ID}"
+memoryLimit: 100

@@ -1,0 +1,24 @@
+_id: 60d9c65f38158a002c392492
+env:
+  SECRET_API_KEY: "{SECRET_API_KEY}"
+  USER_POLICY: "{USER_POLICY}"
+  USER_BUCKET_ID: "{USER_BUCKET_ID}"
+language: javascript
+name: Test Login & Register
+timeout: 71.7
+triggers:
+  register:
+    options:
+      method: Post
+      path: /register
+      preflight: true
+    type: http
+    active: true
+  login:
+    options:
+      method: Post
+      path: /login
+      preflight: true
+    type: http
+    active: true
+memoryLimit: 100

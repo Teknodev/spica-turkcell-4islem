@@ -1,0 +1,24 @@
+_id: 652fad184f6554002c84261c
+name: Turkcell Pool Report
+language: javascript
+timeout: 60
+triggers:
+  executeReportDaily:
+    options:
+      timezone: Turkey
+      frequency: 5 7 * * *
+    type: schedule
+    active: true
+  getPoolReport:
+    options:
+      method: Post
+      path: /getPoolReport
+      preflight: true
+    type: http
+    active: true
+env:
+  CHARGE_REPORT_BUCKET: "{CHARGE_REPORT_BUCKET}"
+  POOL_CHARGE_REPORT_BUCKET: "{POOL_CHARGE_REPORT_BUCKET}"
+  NO_DEVKIT_DATABASE_WARNING: "{NO_DEVKIT_DATABASE_WARNING}"
+memoryLimit: 100
+order: 24

@@ -1,0 +1,16 @@
+_id: 657328d24f6554002cec6d37
+name: Adding msisdn to Contact Message
+language: javascript
+timeout: 126.3
+triggers:
+  onContactMessageInserted:
+    type: bucket
+    active: true
+    options:
+      bucket: 654cd7834f6554002cbd438a
+      type: INSERT
+env:
+  USER_BUCKET_ID: "{USER_BUCKET_ID}"
+  CONTACT_MESSAGE_ID: "{CONTACT_MESSAGE_ID}"
+  API_KEY: "{API_KEY}"
+memoryLimit: 100

@@ -1,0 +1,14 @@
+_id: 60eef28ad55625002c3950c8
+name: Get Current Date
+language: javascript
+timeout: 40
+triggers:
+  getStartDate:
+    type: http
+    active: true
+    options:
+      method: Get
+      path: /getStartDate
+      preflight: true
+env: {}
+memoryLimit: 100

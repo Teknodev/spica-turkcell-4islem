@@ -1,0 +1,166 @@
+_id: 633bf949956545002c9b7e31
+name: Helper
+language: javascript
+timeout: 52.2
+triggers:
+  replaceAbusiveName:
+    options:
+      timezone: UTC
+      frequency: 0 * * * *
+    type: schedule
+    active: true
+  tesxxx:
+    options:
+      method: Get
+      path: /tesxxx
+      preflight: true
+    type: http
+    active: false
+  checkUserFreePlay:
+    options:
+      method: Post
+      path: /checkUserFreePlay
+      preflight: true
+    type: http
+    active: true
+  identityMigration:
+    options:
+      method: Get
+      path: /identityMigration
+      preflight: true
+    type: http
+    active: true
+  messageValueMigration:
+    options:
+      method: Get
+      path: /messageValueMigration
+      preflight: true
+    type: http
+    active: true
+  getChargeData:
+    options:
+      method: Get
+      path: /getChargeData
+      preflight: true
+    type: http
+    active: false
+  getGameLeagueUsers:
+    options:
+      method: Get
+      path: /getGameLeagueUsers
+      preflight: true
+    type: http
+    active: false
+  getGameLeagueSendedData:
+    options:
+      method: Get
+      path: /getGameLeagueSendedData
+      preflight: true
+    type: http
+    active: false
+  chargesData:
+    options:
+      method: Get
+      path: /chargesData
+      preflight: true
+    type: http
+    active: false
+  getUniquePlayer:
+    options:
+      method: Get
+      path: /getUniquePlayer
+      preflight: true
+    type: http
+    active: false
+  getMsisdnsFromBucket:
+    options:
+      method: Get
+      path: /getMsisdnsFromBucket
+      preflight: true
+    type: http
+    active: false
+  patchUsers:
+    options:
+      method: Get
+      path: /patchUsers
+      preflight: true
+    type: http
+    active: false
+  deleteManyTest:
+    options:
+      method: Get
+      path: /deleteManyTest
+      preflight: true
+    type: http
+    active: false
+  getUniqueCharge:
+    options:
+      method: Get
+      path: /getUniqueCharge
+      preflight: true
+    type: http
+    active: false
+  getWrongData:
+    options:
+      method: Get
+      path: /getWrongData
+      preflight: true
+    type: http
+    active: false
+  findUnmatchedIdentityEntries:
+    options:
+      method: Get
+      path: /findUnmatchedIdentityEntries
+      preflight: true
+    type: http
+    active: false
+  removeSomeIdentity:
+    options:
+      method: Get
+      path: /removeSomeIdentity
+      preflight: true
+    type: http
+    active: false
+  getTvpPlusRewardedNewUsers:
+    options:
+      method: Get
+      path: /getTvpPlusRewardedNewUsers
+      preflight: true
+    type: http
+    active: true
+  findIdentity:
+    options:
+      timezone: UTC
+      frequency: "* * * * *"
+    type: schedule
+    active: false
+  ozikoReport:
+    options:
+      method: Get
+      path: /ozikoReport
+      preflight: true
+    type: http
+    active: true
+  buggedUserDataOperation:
+    options:
+      method: Get
+      path: /buggedUserDataOperation
+      preflight: true
+    type: http
+    active: false
+  retrySystemReportOperations:
+    options:
+      method: Get
+      path: /retrySystemReportOperations
+      preflight: true
+    type: http
+    active: false
+env:
+  NO_DEVKIT_DATABASE_WARNING: "{NO_DEVKIT_DATABASE_WARNING}"
+  USER_BUCKET: "{USER_BUCKET}"
+  PAST_MATCHES_BUCKET: "{PAST_MATCHES_BUCKET}"
+  CHARGE_BUCKET: "{CHARGE_BUCKET}"
+  GAME_LEAGUE_PARTICIPANTS: "{GAME_LEAGUE_PARTICIPANTS}"
+  DRAW_LOGS: "{DRAW_LOGS}"
+  CONFIGURATION: "{CONFIGURATION}"
+memoryLimit: 100

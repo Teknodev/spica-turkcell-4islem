@@ -1,0 +1,29 @@
+_id: 6107e911258f8d002c124635
+name: Detect unused image
+language: javascript
+timeout: 40
+triggers:
+  initialize:
+    options:
+      method: Get
+      path: /unusedImageDetect
+      preflight: true
+    type: http
+    active: true
+  cleanAllStorageData:
+    options:
+      method: Get
+      path: /clean-all-storage-data
+      preflight: true
+    type: http
+    active: true
+  cleanUnusedStorageData:
+    options:
+      method: Get
+      path: /clean-unused-storage-data
+      preflight: true
+    type: http
+    active: true
+env:
+  AUTH_APIKEY: "{AUTH_APIKEY}"
+memoryLimit: 100

@@ -1,0 +1,30 @@
+_id: 60f16c6f29eb79002d0857dc
+title: Importer - Templates
+description: Describe your new bucket
+icon: view_stream
+primary: name
+readOnly: false
+history: false
+properties:
+  name:
+    type: string
+    title: name
+    description: Description of the name input
+    options:
+      position: bottom
+  bucket_id:
+    type: string
+    title: bucket_id
+    description: Description of the bucket_id input
+    options:
+      position: bottom
+  file:
+    type: storage
+    title: file
+    description: Description of the file input
+    options:
+      position: bottom
+acl:
+  write: true==true
+  read: true==true
+order: 30

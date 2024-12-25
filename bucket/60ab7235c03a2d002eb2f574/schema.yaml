@@ -1,0 +1,71 @@
+_id: 60ab7235c03a2d002eb2f574
+title: Charge Logs
+description: Describe your new bucket
+icon: view_stream
+primary: msisdn
+readOnly: false
+history: false
+properties:
+  order_id:
+    type: number
+    title: order_id
+    description: Description of the order_id input
+    options:
+      position: bottom
+  msisdn:
+    type: string
+    title: msisdn
+    description: Description of the msisdn input
+    options:
+      position: bottom
+      index: true
+  user_text:
+    type: string
+    title: user_text
+    description: Description of the user_text input
+    options:
+      position: bottom
+  date:
+    type: date
+    title: date
+    description: Description of the date input
+    options:
+      position: bottom
+      index: true
+  status:
+    type: boolean
+    title: status
+    description: Description of the status input
+    options:
+      position: bottom
+      index: true
+    default: false
+  result:
+    type: textarea
+    title: result
+    description: Description of the result input
+    options:
+      position: bottom
+  is_success:
+    type: boolean
+    title: is_success
+    description: Description of the is_success input
+    options:
+      position: bottom
+    default: false
+  marketing_request:
+    type: string
+    title: marketing_request
+    description: Description of the marketing_request input
+    options:
+      position: bottom
+  marketing_response:
+    type: string
+    title: marketing_response
+    description: Description of the marketing_response input
+    options:
+      position: bottom
+acl:
+  write: true==true
+  read: true==true
+order: 24

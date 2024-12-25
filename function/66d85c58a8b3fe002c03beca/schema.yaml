@@ -1,0 +1,20 @@
+_id: 66d85c58a8b3fe002c03beca
+name: Singleplay Matchmaker
+language: javascript
+timeout: 60
+triggers:
+  singleplayMatchmaker:
+    options:
+      method: Post
+      path: /singleplayMatchmaker
+      preflight: true
+    type: http
+    active: true
+  clearSingleServerInfoBucket:
+    options:
+      timezone: UTC
+      frequency: "* * * * *"
+    type: schedule
+    active: true
+env: {}
+memoryLimit: 100

@@ -1,0 +1,21 @@
+_id: 60d9c73538158a002c392498
+env:
+  MATCHMAKING_BUCKET_ID: "{MATCHMAKING_BUCKET_ID}"
+  SECRET_API_KEY: "{SECRET_API_KEY}"
+  DUEL_BUCKET_ID: "{DUEL_BUCKET_ID}"
+  USER_BUCKET_ID: "{USER_BUCKET_ID}"
+  CONFIGURATION_BUCKET_ID: "{CONFIGURATION_BUCKET_ID}"
+  NO_DEVKIT_DATABASE_WARNING: "{NO_DEVKIT_DATABASE_WARNING}"
+  BOT_BUCKET_ID: "{BOT_BUCKET_ID}"
+  SERVERS_INFO: "{SERVERS_INFO}"
+language: javascript
+name: Matchmaker
+timeout: 56.9
+triggers:
+  matchmaker:
+    options:
+      timezone: Europe/Istanbul
+      frequency: "* * * * *"
+    type: schedule
+    active: true
+memoryLimit: 100

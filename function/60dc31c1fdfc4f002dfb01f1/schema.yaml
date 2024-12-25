@@ -1,0 +1,14 @@
+_id: 60dc31c1fdfc4f002dfb01f1
+name: Create Question
+language: javascript
+timeout: 40
+triggers:
+  default:
+    type: http
+    active: true
+    options:
+      method: Get
+      path: /testestest
+      preflight: true
+env: {}
+memoryLimit: 100

@@ -1,0 +1,49 @@
+_id: 60f16c6f29eb79002d0857db
+title: Exporter - Templates
+description: Describe your new bucket
+icon: view_stream
+primary: title
+readOnly: false
+history: false
+properties:
+  title:
+    type: string
+    title: title
+    description: Title of the row
+    options:
+      position: left
+  auto:
+    type: boolean
+    title: auto
+    description: Description of the auto input
+    options:
+      position: bottom
+    default: false
+  link:
+    type: richtext
+    title: link
+    description: Description of the link input
+    options:
+      position: bottom
+  from_date:
+    type: date
+    title: from_date
+    description: Description of the from_date input
+    options:
+      position: bottom
+  to_date:
+    type: date
+    title: to_date
+    description: Description of the to_date input
+    options:
+      position: bottom
+  property_name:
+    type: string
+    title: property_name
+    description: Description of the property_name input
+    options:
+      position: bottom
+acl:
+  write: true==true
+  read: true==true
+order: 31

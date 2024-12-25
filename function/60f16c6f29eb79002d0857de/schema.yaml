@@ -1,0 +1,38 @@
+_id: 60f16c6f29eb79002d0857de
+name: Export Excel
+language: javascript
+timeout: 40
+triggers:
+  initialize:
+    options:
+      method: Get
+      path: /initializeExportExcel
+      preflight: true
+    type: http
+    active: true
+  excelExport:
+    options:
+      method: Get
+      path: /
+      preflight: true
+    type: http
+    active: true
+  exportDatasManually:
+    options:
+      method: Get
+      path: /exportDatasManually
+      preflight: true
+    type: http
+    active: true
+  updateLink:
+    options:
+      collection: bucket_60f16c6f29eb79002d0857db
+      type: UPDATE
+    type: database
+    active: true
+env:
+  AUTH_APIKEY: "{AUTH_APIKEY}"
+  BUCKET_EXPORT_TEMPLATES: "{BUCKET_EXPORT_TEMPLATES}"
+  FORMAT_TYPE: "{FORMAT_TYPE}"
+  NO_DEVKIT_DATABASE_WARNING: "{NO_DEVKIT_DATABASE_WARNING}"
+memoryLimit: 100
