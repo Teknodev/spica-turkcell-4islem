@@ -155,6 +155,20 @@ triggers:
       preflight: true
     type: http
     active: false
+  getUniquePlayerMsisdn:
+    options:
+      method: Get
+      path: /getUniquePlayerMsisdn
+      preflight: true
+    type: http
+    active: true
+  monthlyPlayControl:
+    options:
+      method: Get
+      path: /monthlyPlayControl
+      preflight: true
+    type: http
+    active: true
 env:
   NO_DEVKIT_DATABASE_WARNING: "{NO_DEVKIT_DATABASE_WARNING}"
   USER_BUCKET: "{USER_BUCKET}"

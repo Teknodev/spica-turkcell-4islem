@@ -7,7 +7,27 @@ export async function singleplayMatchmaker(req, res) {
 
     return res.status(200).send({ message: 'Successfull' });
 }
+export async function newMatchmakerAWS(req, res) {
+    console.log("newMatchmakerAWS")
+    const { userID, userFree } = req.body;
+    const duelData = createDuelObject(userID, userFree);
+ 
+    requestForANewGameAWS(duelData)
+    return res.status(200).send({ message: 'Successfull' });
+}
+async function requestForANewGameAWS(data) {
+    data["user"] = String(data.user);
+    console.log("@REQUEST FOR A NEW GAME AWS")
+    const users = [String(data.user)];
 
+    await Api.httpRequest('post', 'https://match-instance-f21ff.aws.spicaengine.com/api/fn-execute/new-game-listener', {
+        "referenceNo": String(Date.now()),
+        "service": "tcell_4islem",
+        "data": data,
+        "users": users
+    }, {}).catch(err => console.error("ERR:HATAHATAHATAHATAHATAHATAHATA ", err));
+    return
+}
 function createDuelObject(userID, userFree) {
     const duelArray = {
         user: Api.toObjectId(userID),

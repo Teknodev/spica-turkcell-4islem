@@ -831,6 +831,7 @@ export async function reportExportSend(title, reportType) {
                 "Pinar.koca@turkcell.com.tr",
                 "ozangol@teknodev.biz",
                 "serkan@polyhagency.com",
+                "emrecandan@teknodev.biz",
                 "batuhanevirgen@teknodev.biz"
             ],
             report_type: reportType,

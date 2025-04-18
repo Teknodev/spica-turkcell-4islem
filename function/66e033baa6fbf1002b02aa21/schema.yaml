@@ -17,6 +17,13 @@ triggers:
       preflight: true
     type: http
     active: true
+  singlePlayinsertPastMatchAWS:
+    options:
+      method: Post
+      path: /insertPastMatchFromAWSServer
+      preflight: true
+    type: http
+    active: true
 env:
   OPERATION_KEY: "{OPERATION_KEY}"
   USER_BUCKET_ID: "{USER_BUCKET_ID}"

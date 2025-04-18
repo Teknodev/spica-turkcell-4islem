@@ -16,5 +16,12 @@ triggers:
       frequency: "* * * * *"
     type: schedule
     active: true
+  newMatchmakerAWS:
+    options:
+      method: Post
+      path: /newMatchmakerAWS
+      preflight: true
+    type: http
+    active: true
 env: {}
 memoryLimit: 100
